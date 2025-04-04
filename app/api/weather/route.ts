@@ -19,9 +19,9 @@ export async function GET(req: NextRequest) {
   let endpoint = `${base}/${encodeURIComponent(location)}`;
 
   if (type === "current") {
-    endpoint += `/today?unitGroup=metric&include=current`;
+    endpoint += `/today?unitGroup=us&include=current`;
   } else {
-    endpoint += `?unitGroup=metric&include=days`;
+    endpoint += `?unitGroup=us&include=days`;
   }
 
   endpoint += `&key=${key}&contentType=json`;
